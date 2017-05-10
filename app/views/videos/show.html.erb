@@ -1,0 +1,23 @@
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Titulo:</strong>
+  <%= @video.titulo %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @video.descripcion %>
+</p>
+
+<p>
+ 
+   <video src="<%= @video.archivovideo %>" controls>
+
+  Tu navegador no implementa el elemento <code>video</code>.
+</video>
+</p>
+
+<%= link_to 'Editar', edit_video_path(@video) %> |
+<%= link_to 'Regresar', videos_path %>

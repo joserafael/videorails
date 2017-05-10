@@ -1,0 +1,4 @@
+
+
+$('.default-slider').unslider();
+
