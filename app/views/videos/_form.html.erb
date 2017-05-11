@@ -10,23 +10,25 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
+<div class="col-md-6 col-lg-6 col-sm-12">
+  <div class="form-group">
     <%= form.label :titulo %>
-    <%= form.text_field :titulo, id: :video_titulo %>
+    <%= form.text_field :titulo, id: :video_titulo, :class=> 'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :descripcion %>
-    <%= form.text_field :descripcion, id: :video_descripcion %>
+    <%= form.text_field :descripcion, id: :video_descripcion, :class=> 'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :archivovideo %>
-    <%= form.file_field :archivovideo, id: :video_archivovideo %>
+    <%= form.file_field :archivovideo, id: :video_archivovideo, :class=> 'form-control' %>
   </div>
 
-  <div class="actions">
+  <div class="form-group">
     <%= form.submit %>
   </div>
 <% end %>
+
+</div>
