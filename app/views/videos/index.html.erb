@@ -8,48 +8,34 @@
 <h1> Videos </h1>
 
 </div>
-<table class="table">
-  <thead>
-    <tr>
-      <th>Titulo</th>
-      <th>Descripcion</th>
-      <th>Archivovideo</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
+<div class="row">
+ 
     <% @videos.each do |video| %>
-      <tr>
-        <td><%= video.titulo %></td>
-        <td><%= video.descripcion %></td>
-        <td>
-       
-  
-
-   <div class="slider">
+<div class="col">
+    <div class="card" style="width: 20rem;">
+  <div class="slider">
   <%= image_tag video.archivovideo.url(:cuadro1) %>
    <%= image_tag video.archivovideo.url(:cuadro2) %>
     <%= image_tag video.archivovideo.url(:cuadro3) %>
    <%= image_tag video.archivovideo.url(:cuadro4) %>
   </ul>
 </div>
+  <div class="card-block">
+    <h4 class="card-title">  <%= video.titulo %></h4>
+    <p class="card-text"> <%= video.descripcion %></p>
+    <%= link_to 'Ver', video, :class => 'btn btn-primary' %>
+      <%= link_to 'Editar', edit_video_path(video), :class => 'btn btn-warning' %>
+       <%= link_to 'Borrar', video, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-danger' %>
+  </div>
+</div>
+</div>
    
+          <% end %>
 
-
-
-
-        </td>
-        <td><%= link_to 'Ver', video %></td>
-        <td><%= link_to 'Editar', edit_video_path(video) %></td>
-        <td><%= link_to 'Borrar', video, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
+</div>
 <br>
 
-<%= link_to 'Agregar video', new_video_path %>
+
 
 
