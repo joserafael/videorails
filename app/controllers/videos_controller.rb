@@ -1,5 +1,5 @@
 class VideosController < ApplicationController
-  before_action :set_video, only: [:show, :edit, :update, :destroy]
+  before_action :set_video, only: [:show, :edit, :update, :destroy, :bajo]
 
   # GET /videos
   # GET /videos.json
@@ -10,6 +10,9 @@ class VideosController < ApplicationController
   # GET /videos/1
   # GET /videos/1.json
   def show
+  end
+
+  def bajo
   end
 
   # GET /videos/new

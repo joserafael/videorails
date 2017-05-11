@@ -13,12 +13,12 @@
 
 <p>
  
-   <video src="<%= @video.archivovideo %>" controls>
+   <video src="<%=  @video.archivovideo(:medium) %>" controls>
 
   Tu navegador no implementa el elemento <code>video</code>.
 </video>
 </p>
-<a href="/videos/bajaresolucion/<%= @video.id%>"> Ver en baja resolucion </a> |
+<a href="/videos/<%= @video.id%>"> Ver en alta resolucion </a>  |
 <%= link_to 'Editar', edit_video_path(@video) %> |
 <%= link_to 'Regresar', videos_path %>
 </div>
